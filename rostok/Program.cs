@@ -19,7 +19,8 @@ namespace rostok
 
             Console.WriteLine($"3.feladat:  Az élelmiszerek száma: {lista.Count}");
             Console.WriteLine($"4.feladat: nem 100g-s egység: {lista.Where(x => x.Egyseg != "100g").Count()} ");
-            Console.WriteLine($"5.feladat: friss gümölcsök átlagos rost tartalma: {lista.Where(x => x.Egyseg == "100g").Sum(x => x.Rost).}");
+            Console.WriteLine($"5.feladat: friss gümölcsök átlagos rost tartalma: {lista.Where(x => x.Egyseg == "100g" && x.Kategoria == "Friss gyümölcsök").Average(x => x.Rost)}");
+            Console.WriteLine($"6.f");
             
 
 

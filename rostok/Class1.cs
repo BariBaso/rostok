@@ -11,7 +11,7 @@ namespace rostok
         public string MegNev { get; set; }
         public string Kategoria { get; set; }
         public string Egyseg { get; set; }
-        public string Rost { get; set; }
+        public double Rost { get; set; }
 
 
         public Class1(string sor)
@@ -21,7 +21,7 @@ namespace rostok
             MegNev = s[0];
             Kategoria = s[1];
             Egyseg = s[2];
-            Rost = s[3];
+            Rost = double.Parse(s[3]);
         }
     }
 }
