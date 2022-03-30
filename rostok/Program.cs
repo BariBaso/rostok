@@ -20,11 +20,16 @@ namespace rostok
             Console.WriteLine($"3.feladat:  Az élelmiszerek száma: {lista.Count}");
             Console.WriteLine($"4.feladat: nem 100g-s egység: {lista.Where(x => x.Egyseg != "100g").Count()} ");
             Console.WriteLine($"5.feladat: friss gümölcsök átlagos rost tartalma: {lista.Where(x => x.Egyseg == "100g" && x.Kategoria == "Friss gyümölcsök").Average(x => x.Rost)}");
-            Console.WriteLine($"6.f");
-            
+            //string a;
+            //Console.Write($"6.feladat: kérekegy karakter láncot:");
+            //a = Console.ReadLine();
+
+            //lista.Where(x => x.MegNev == a);
 
 
-
+            Console.WriteLine($"7.feladat: Kategóriák száma: {lista.GroupBy(x => x.Kategoria).Count()}");
+            Console.WriteLine($"8.feladat: Statisztika");
+            lista.GroupBy(x => x.Kategoria).Count();
 
         }
     }
